@@ -19,12 +19,6 @@ use SprykerShop\Yves\WishlistPage\Dependency\Plugin\ProductAlternativeWidget\Pro
  */
 class ProductAlternativeWidgetPlugin extends AbstractWidgetPlugin implements ProductAlternativeWidgetPluginInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     * @param string $wishlistName
-     *
-     * @return void
-     */
     public function initialize(ProductViewTransfer $productViewTransfer, string $wishlistName): void
     {
         $widget = new WishlistProductAlternativeWidget($productViewTransfer, $wishlistName);

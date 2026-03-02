@@ -15,9 +15,6 @@ use Spryker\Yves\Kernel\Widget\AbstractWidget;
  */
 class ProductAlternativeListWidget extends AbstractWidget
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     */
     public function __construct(ProductViewTransfer $productViewTransfer)
     {
         $this->addParameter('products', $this->findAlternativesProducts($productViewTransfer));
@@ -26,17 +23,11 @@ class ProductAlternativeListWidget extends AbstractWidget
         $this->addWidgets($this->getFactory()->getProductDetailPageProductAlternativeWidgetPlugins());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'ProductAlternativeListWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@ProductAlternativeWidget/views/product-alternative-list/product-alternative-list.twig';

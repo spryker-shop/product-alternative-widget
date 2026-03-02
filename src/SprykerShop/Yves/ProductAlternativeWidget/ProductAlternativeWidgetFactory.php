@@ -12,9 +12,6 @@ use SprykerShop\Yves\ProductAlternativeWidget\Dependency\Client\ProductAlternati
 
 class ProductAlternativeWidgetFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\ProductAlternativeWidget\Dependency\Client\ProductAlternativeWidgetToProductAlternativeStorageClientInterface
-     */
     public function getProductAlternativeStorageClient(): ProductAlternativeWidgetToProductAlternativeStorageClientInterface
     {
         return $this->getProvidedDependency(ProductAlternativeWidgetDependencyProvider::CLIENT_PRODUCT_ALTERNATIVE_STORAGE);

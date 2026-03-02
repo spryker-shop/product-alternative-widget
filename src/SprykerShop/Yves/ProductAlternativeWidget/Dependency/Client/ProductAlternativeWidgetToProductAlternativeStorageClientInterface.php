@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\ProductViewTransfer;
 
 interface ProductAlternativeWidgetToProductAlternativeStorageClientInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     *
-     * @return bool
-     */
     public function isAlternativeProductApplicable(ProductViewTransfer $productViewTransfer): bool;
 
     /**

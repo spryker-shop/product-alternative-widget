@@ -24,11 +24,6 @@ class ProductAlternativeWidgetToProductAlternativeStorageClientBridge implements
         $this->productAlternativeStorageClient = $productAlternativeStorageClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     *
-     * @return bool
-     */
     public function isAlternativeProductApplicable(ProductViewTransfer $productViewTransfer): bool
     {
         return $this->productAlternativeStorageClient->isAlternativeProductApplicable($productViewTransfer);
