@@ -20,6 +20,11 @@ use SprykerShop\Yves\ShoppingListPage\Dependency\Plugin\ProductAlternativeWidget
  */
 class ProductAlternativeWidgetPlugin extends AbstractWidgetPlugin implements ProductAlternativeWidgetPluginInterface
 {
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
     public function initialize(ProductViewTransfer $productViewTransfer, ShoppingListTransfer $shoppingListTransfer): void
     {
         $widget = new ShoppingListProductAlternativeWidget($productViewTransfer, $shoppingListTransfer);

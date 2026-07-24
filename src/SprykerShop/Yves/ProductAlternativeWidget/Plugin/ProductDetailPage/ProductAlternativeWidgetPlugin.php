@@ -19,6 +19,11 @@ use SprykerShop\Yves\ProductDetailPage\Dependency\Plugin\ProductAlternativeWidge
  */
 class ProductAlternativeWidgetPlugin extends AbstractWidgetPlugin implements ProductAlternativeWidgetPluginInterface
 {
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
     public function initialize(ProductViewTransfer $productViewTransfer): void
     {
         $widget = new ProductAlternativeListWidget($productViewTransfer);
