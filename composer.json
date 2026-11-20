@@ -22,7 +22,8 @@
         "spryker-shop/merchant-product-widget": "if you want to use ProductAlternativeWidgetPlugin: ^1.1.0",
         "spryker-shop/product-detail-page": "if you want to use ProductAlternativeWidgetPlugin: ^1.1.0",
         "spryker-shop/shopping-list-page": "if you want to use ProductAlternativeWidgetPlugin: ^0.4.1",
-        "spryker-shop/wishlist-page": "if you want to use ProductAlternativeWidgetPlugin: ^1.1.0"
+        "spryker-shop/wishlist-page": "if you want to use ProductAlternativeWidgetPlugin: ^1.1.0",
+        "spryker-shop/traceable-event-widget": "If you want the products to carry their tracking details (ProductTrackingDetailsWidget) for the traceable events."
     },
     "autoload": {
         "psr-4": {

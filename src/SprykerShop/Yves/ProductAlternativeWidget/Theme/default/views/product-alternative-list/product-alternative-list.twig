@@ -30,8 +30,12 @@
             },
         } %}
 
-        <div class="spacing-y--big">
-            <h2 class="title title--h5 spacing-x">{{ 'product_alternative_widget.product_alternative' | trans }}</h2>
+        {% set listTitle = 'product_alternative_widget.product_alternative' | trans %}
+
+        {# The list as the traceable events identify it, e.g. GA4 view_item_list; a constant English name, as the title the shopper sees is translated
+           and would split the list by locale in the reports. #}
+        <div class="spacing-y--big" data-item-list-id="product_alternatives" data-item-list-name="Product alternatives">
+            <h2 class="title title--h5 spacing-x">{{ listTitle }}</h2>
 
             {% embed molecule('simple-carousel') with sliderConfig only %}
                 {% block slide %}
@@ -56,6 +60,10 @@
                     {% endblock %}
                 {% endembed %}
             {% endif %}
+
+            {% block productTrackingDetails %}
+                {% widget 'ProductTrackingDetailsWidget' args [data.products] only %}{% endwidget %}
+            {% endblock %}
         </div>
     {% endif %}
 {% endblock %}
